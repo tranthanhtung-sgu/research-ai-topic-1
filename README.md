@@ -113,6 +113,65 @@ Ensure the `weights/` folder contains both:
 
 ---
 
+## 📊 Benchmarking Results
+
+Here are the performance metrics of various segmentation models:
+
+### 🔢 FLOPs (G) Comparison
+
+![FLOPs](./BarChart_FLOPs_(G).png)
+
+### ⚡ FPS (Frames per Second) Comparison
+
+![FPS](./BarChart_FPS.png)
+
+### 🕒 Latency (ms) Comparison
+
+![Latency](./BarChart_Latency_(ms).png)
+
+### 🧠 Memory Usage (GB) Comparison
+
+![Memory](./BarChart_Memory_(GB).png)
+
+### 📈 mIoU (%) Comparison
+
+![mIoU](./BarChart_mIoU.png)
+
+### 🔧 Number of Parameters (M) Comparison
+
+![Params](./BarChart_Params_(M).png)
+
+### 🔥 Overall Model Comparison – Heatmap
+
+This heatmap provides an at-a-glance overview of all models across key metrics like mIoU, FPS, Latency, FLOPs, Params, and Memory:
+
+![Heatmap](Heatmap_Model_Performance.png)
+
+---
+
+### 📋 Full Benchmark Table
+
+The full evaluation metrics for all models (mIoU, per-class IoUs, FLOPs, FPS, latency, etc.) are available in [this full CSV results file here](all_model_results.csv)
+
+or :
+
+#### Benchmark Results Table
+
+| Model        |   mIoU (%) |   FLOPs (G) |   Params (M) |   FPS  |   Latency (ms) |   Memory (GB) |
+|:-------------|-----------:|------------:|-------------:|-------:|---------------:|--------------:|
+| FCN          |      65.30 |     1580.78 |        47.08 |   7.88 |         126.94 |          0.20 |
+| U-Net        |      63.05 |     1621.08 |        28.97 |   6.71 |         149.01 |          0.12 |
+| DeepLabV3+   |      66.74 |     2029.95 |        60.09 |   0.16 |        6223.67 |          0.25 |
+| PSPNet       |      66.27 |     1426.48 |        46.55 |   8.23 |         121.50 |          0.20 |
+| HRNet+OCR    |      67.42 |     1295.33 |        70.28 |   5.92 |         168.96 |          0.30 |
+| SETR         |      68.51 |       10.87 |         1.15 |   0.22 |        4500.66 |          1.52 |
+| SegFormer-B5 |      69.62 |       50.36 |         2.55 |   3.06 |         327.06 |          0.63 |
+| BiSeNet V2   |      70.73 |       99.09 |         3.36 |  21.18 |          47.21 |          0.37 |
+| Fast-SCNN    |      71.84 |        7.25 |         1.38 | 221.98 |           4.50 |          0.32 |
+| DDRNet-23    |      72.95 |       36.42 |         5.69 | 135.11 |           7.40 |          0.34 |
+
+---
+
 ## 📂 Project Structure
 
 ```

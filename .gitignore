@@ -28,6 +28,4 @@ cityscapes/
 
 # Logs and results
 *.log
-*.csv
-*.png
 *.jpg
