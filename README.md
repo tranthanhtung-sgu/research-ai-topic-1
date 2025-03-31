@@ -70,14 +70,29 @@ pip install -r requirements.txt
 
 The project uses the [Cityscapes dataset](https://www.cityscapes-dataset.com/). Due to size, it's not included in this repository.
 
-1. Download Cityscapes manually (registration required)  
-2. Place it inside the project like this:
+🔗 Download Links (registration required)
+
+🧷 Images (leftImg8bit):
+https://www.cityscapes-dataset.com/file-handling/?packageID=3
+
+🧷 Ground Truth (gtFine):
+https://www.cityscapes-dataset.com/file-handling/?packageID=1
+
+
+Place it inside the project like this:
 
 ```
 research-ai-topic-1/
 ├── cityscapes/
 │   ├── leftImg8bit/
+│   │   ├── train/
+│   │   ├── val/
+│   │   └── test/
 │   └── gtFine/
+│       ├── train/
+│       ├── val/
+│       └── test/
+
 ```
 
 3. Update dataset paths in your config files or scripts if needed.
