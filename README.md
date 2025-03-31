@@ -72,12 +72,11 @@ The project uses the [Cityscapes dataset](https://www.cityscapes-dataset.com/). 
 
 🔗 Download Links (registration required)
 
-🧷 Images (leftImg8bit):
+🧷 Images (leftImg8bit):  
 https://www.cityscapes-dataset.com/file-handling/?packageID=3
 
-🧷 Ground Truth (gtFine):
+🧷 Ground Truth (gtFine):  
 https://www.cityscapes-dataset.com/file-handling/?packageID=1
-
 
 Place it inside the project like this:
 
@@ -92,7 +91,6 @@ research-ai-topic-1/
 │       ├── train/
 │       ├── val/
 │       └── test/
-
 ```
 
 3. Update dataset paths in your config files or scripts if needed.
@@ -110,6 +108,38 @@ python inference_all_models.py
 Ensure the `weights/` folder contains both:
 - `.pth` checkpoint files
 - Corresponding `.py` MMSegmentation config files
+
+---
+
+## 🧠 MMSegmentation Integration
+
+This project is built directly on top of [OpenMMLab's MMSegmentation](https://github.com/open-mmlab/mmsegmentation), a widely-used open-source library for semantic segmentation.
+
+We use it to:
+
+- 🔧 Initialize models with `init_model()`
+- 🧠 Run inference using `inference_model()`
+- 📥 Automatically download official configs and pre-trained checkpoints using [OpenMIM](https://github.com/open-mmlab/mim)
+
+Example (automated in our script):
+
+```bash
+mim download mmsegmentation --config deeplabv3plus_r101-d8_4xb2-40k_cityscapes-512x1024 --dest weights/
+```
+
+All evaluated models come from the MMSegmentation model zoo for consistent benchmarking.
+
+**Models used in this study:**
+- FCN
+- U-Net
+- DeepLabV3+
+- PSPNet
+- HRNet+OCR
+- SETR
+- SegFormer-B5
+- BiSeNet V2
+- Fast-SCNN
+- DDRNet-23
 
 ---
 
@@ -184,7 +214,11 @@ research-ai-topic-1/
 ├── environment.yml
 ├── .gitignore
 ├── requirements.txt
-└── README.md
+├── README.md
+├── all_model_results.csv
+├── BarChart_*.png
+├── Heatmap_Model_Performance.png
+├── Radar_Chart_Model_Performance.png
 ```
 
 ---
