@@ -1,0 +1,33 @@
+# Python stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+*.code-workspace
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Model weights & data
+weights/
+*.pth
+*.pt
+*.onnx
+*.ckpt
+*.h5
+*.tflite
+cityscapes/
+*.zip
+*.tar.gz
+
+# Logs and results
+*.log
+*.csv
+*.png
+*.jpg
